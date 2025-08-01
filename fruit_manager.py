@@ -34,7 +34,7 @@ def afficher_inventaire(inventaire:dict[str, int]):
         
         
         
-def recolter(inventaire:dict[str, int], fruit:str, quantite:int):
+def recolter(inventaire:dict[str, int], fruit, quantite:int):
     inventaire[fruit] = inventaire.get(fruit, 0) + quantite
     print(f"\n✅ Récolté {quantite} {fruit} supplémentaires !")
     
@@ -43,7 +43,7 @@ def recolter(inventaire:dict[str, int], fruit:str, quantite:int):
 def vendre(inventaire, fruit, quantite, tresorerie, prix:dict):
     if inventaire.get(fruit, 0) >= quantite:
         inventaire[fruit] -= quantite 
-        tresorerie += 1 * quantite* prix.get(fruit)
+        tresorerie += 1 * quantite* prix.get(fruit, 0)
         print(f"\n💰 Vendu {quantite} {fruit} !")  
     else:
         print(f"\n❌ Pas assez de {fruit} pour vendre {quantite} {fruit} unités.")
@@ -62,3 +62,4 @@ if __name__ == "__main__":
     
     ecrire_inventaire(inventaire)
     ecrire_tresorerie(tresorerie)
+    afficher_tresorerie(tresorerie)
