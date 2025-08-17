@@ -1,5 +1,5 @@
 import streamlit as st
-from fruit_manager import *
+from my_package.fruit_manager import *
 
 # Configurer la mise en page de la page Streamlit pour qu'elle soit large
 # st.set_page_config(layout="wide")
