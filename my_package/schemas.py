@@ -9,7 +9,7 @@ class PriceBase(BaseModel):
 class PriceOut(PriceBase):
     
     class Config:
-        orm_mode = True
+        from_attributes  = True
 
 # Inventaire
 class FruitBase(BaseModel):
@@ -24,12 +24,24 @@ class FruitInventaire(FruitBase):
 class FruitCreate(FruitBase):
     prix: int|float
     
-class FruitOut(FruitBase):
+class FruitOut(BaseModel):
     id: int
-    prix: PriceOut
+    name: str
+    quantite: int
+    prix: PriceOut    
+
+    # class Config:
+    #     from_attributes  = True
+
+class InventaireOut(BaseModel):
+    id: int
+    name: str
+    quantite: int
+    # pas de prix ici pour éviter la recursion
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+
 
 # Sales
 class SaleBase(BaseModel):
@@ -38,5 +50,7 @@ class SaleBase(BaseModel):
     # prix_total: int|float
     
     class Config:
-        orm_mode = True
+        from_attributes  = True
+        
+
     

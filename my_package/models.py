@@ -19,7 +19,7 @@ class Inventaire(Base):
     name: Mapped[str] = mapped_column(String(30),unique=True, index=True, nullable=False)
     quantite: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
     
-    prix: Mapped["Price"] = relationship(back_populates='inventaire', uselist=False)
+    prix: Mapped["Price"] = relationship(back_populates='inventaire', uselist=False, cascade="all, delete-orphan")
     
     def __repr__(self) -> str:
         return f"iventaire(id={self.id!r}, name={self.name!r}, quantite={self.quantite!r})"
