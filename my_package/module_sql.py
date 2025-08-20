@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Union
 from typing import Optional
 from sqlalchemy import ForeignKey
 from sqlalchemy import String, Integer
@@ -11,42 +11,16 @@ from sqlalchemy import create_engine
 from sqlalchemy import select
 import os
 from fruit_manager import ouvrir_inventaire, ouvrir_prix
+from models import Base, Inventaire, Price
 
-# CREATION BASE DE DONNEE
-class Base(DeclarativeBase):
-    pass
-
-class Inventaire(Base):
-    # Nom de la table
-    __tablename__ = "inventaire"
-    # attribut de chaque colonne
-    id: Mapped[int] = mapped_column(primary_key=True)
-    name: Mapped[str] = mapped_column(String(30))
-    quantite: Mapped[float] = mapped_column(nullable=False)
-    
-    prix: Mapped["Price"] = relationship(back_populates='inventaire')
-    
-    def __repr__(self) -> str:
-        return f"iventaire(id={self.id!r}, name={self.name!r}, quantite={self.quantite!r})"
-
-class Price(Base):
-    # Nom de la table
-    __tablename__="prices"
-    
-    # attribut de chaque colonne
-    id: Mapped[int] = mapped_column(ForeignKey("inventaire.id"),primary_key=True)
-    price: Mapped[float] = mapped_column(nullable=False)
-    # name_id:Mapped[int] = mapped_column()
-    
-    inventaire: Mapped["Inventaire"] = relationship(back_populates="prix")
-    
-    def __repr__(self) -> str:
-        return f"Price(id={self.id!r}, price={self.price!r})"
-    
-
+######################
     
 # FONCTION
+
+######################
 def create_db():
+    if os.path.exists("data/database.db"):
+        os.remove("data/database.db")
     Base.metadata.create_all(engine)
 
 
@@ -57,39 +31,39 @@ def importation_json_to_db():
     
     with Session(engine) as session:
         elements_inventaire = []
-        elements_price = []
-        
+         
         for name, quantite in inventaire.items():
             element_inventaire = Inventaire(
-                                                id=id,
+                                                # id=id,
                                                 name=name,
                                                 quantite=quantite,
-                                                prix=Price(price=float(dict_prix.get(name)))
+                                                prix=Price(valeur=float(dict_prix.get(name)))
                                             )
-            # element_price = Price(
-            #                         id=id,
-            #                         price=prix.get(name),
-            #                         name_id=id
-            #                     )
+
             id+=1
     
             elements_inventaire.append(element_inventaire)
             # elements_price.append(element_price)
         # Ajoute     
         session.add_all(elements_inventaire)
-        # session.add_all(elements_price)
-        
+         
         session.commit()
         
+def recolte(name:str, quantite:int):
+    engine = create_engine(f"sqlite:///data/database.db", echo=True)
+    with Session(engine) as session:
+        stmt = select(Inventaire).where(Inventaire.name == name)
+        fruit = session.scalars(stmt).one()
+        fruit.quantite += quantite
+        print(fruit.quantite)
+        session.commit()
+ 
+
         
 if __name__ == "__main__":
     base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
-    db_path = os.path.join(base_dir, 'inventaire.db')
-    engine = create_engine(f"sqlite:///{db_path}", echo=True)
+    db_path = os.path.join(base_dir, 'database.db')
+    engine = create_engine(f"sqlite:///data/database.db", echo=True)
 
-    if os.path.exists("data/inventaire.db"):
-        os.remove("data/inventaire.db")
     create_db()
     importation_json_to_db()
-    
-    

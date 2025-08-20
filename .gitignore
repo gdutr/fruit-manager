@@ -3,3 +3,4 @@
 .venv
 __pycache__/
 *.ipynb
+test_fastapi.py
