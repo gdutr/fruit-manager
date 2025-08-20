@@ -9,7 +9,10 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "streamlit (>=1.47.1,<2.0.0)",
-    "sqlalchemy (>=2.0.43,<3.0.0)"
+    "psycopg (>=3.2.9,<4.0.0)",
+    "psycopg2 (>=2.9.10,<3.0.0)",
+    "sqlalchemy (>=2.0.42,<3.0.0)",
+    "fastapi (>=0.116.1,<0.117.0)"
 ]
 
 
