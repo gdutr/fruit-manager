@@ -11,12 +11,6 @@ app = FastAPI()
 # Créer les tables si elles n'existent pas encore
 Base.metadata.create_all(bind=engine)
 
-# VARIABLE
-# db = Depends(get_db)
-# fruit_tuple = db.query(Inventaire.name).all()
-# # transformation en liste
-# FRUIT_LIST = [fruit[0] for fruit in fruit_tuple]
-
 ##########################
 
 # INVENTAIRE
@@ -99,19 +93,3 @@ async def delete_fruit(fruit:str, db:Session = Depends(get_db)):
         db.commit()
         return query_fruit
     raise HTTPException(status_code=404, detail='Le fruit ne se trouve pas dans la base de donnée')
-
-
-
-# @app.post("/users/", response_model=FruitCreate)
-# def create_user(user: UserCreate, db: Session = Depends(get_db)):
-#     db_user = User(name=user.name, email=user.email)
-#     db.add(db_user)
-#     db.commit()
-#     db.refresh(db_user)
-#     return db_user
-
-
-
-# @app.get("/users/", response_model=list[UserRead])
-# def list_users(db: Session = Depends(get_db)):
-#     return db.query(User).all()
