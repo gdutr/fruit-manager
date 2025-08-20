@@ -42,7 +42,7 @@ class History(Base):
     
     id: Mapped[int] = mapped_column(primary_key=True, index=True)
     date: Mapped[Date] = mapped_column(Date, nullable=False)
-    id_fruit: Mapped[int] = mapped_column(Integer, ForeignKey("inventaire.id"), nullable=False)
+    name_fruit: Mapped[int] = mapped_column(String(30), nullable=False)
     nombre: Mapped[int] = mapped_column(Integer, nullable=False)
     prix_total: Mapped[float] = mapped_column(Float, nullable=False)
 
