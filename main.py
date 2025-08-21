@@ -2,8 +2,9 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from my_package.models import Base, Inventaire, Price, History
 from my_package.database import engine, get_db
-from my_package.schemas import FruitCreate, FruitInventaire, FruitBase, FruitOut, SaleBase, InventaireOut
+from my_package.schemas import FruitCreate, FruitInventaire, FruitBase, FruitOut, SaleBase, InventaireOut, HistoryOut
 from datetime import datetime
+import uvicorn
 
 
 app = FastAPI()
@@ -24,7 +25,7 @@ async def inventaire(db:Session = Depends(get_db)):
 
 @app.get("/inventaire/{fruit}", response_model = FruitInventaire)
 async def fruit(fruit:str, db:Session = Depends(get_db)):
-    query = db.query(Inventaire).where(Inventaire.name==fruit).one()
+    query = db.query(Inventaire).where(Inventaire.name==fruit).first()
     if not query:
         raise HTTPException(status_code=404, detail='Le fruit ne se trouve pas dans la base de donnée')
     else:
@@ -54,7 +55,8 @@ async def sell_fruit(fruit: SaleBase, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(history_fruit)
     db.refresh(query_fruit)
-    return query_fruit
+    print(history_fruit.prix_total)
+    return history_fruit.prix_total
 
 
 @app.put("/inventaire/recolte/{fruit}")
@@ -93,3 +95,11 @@ async def delete_fruit(fruit:str, db:Session = Depends(get_db)):
         db.commit()
         return query_fruit
     raise HTTPException(status_code=404, detail='Le fruit ne se trouve pas dans la base de donnée')
+
+@app.get("/history/", response_model=list[HistoryOut])
+async def history(db: Session = Depends(get_db)):
+    return db.query(History).all()
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", port=8000, log_level="info")

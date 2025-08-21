@@ -1,6 +1,6 @@
 from typing import Union
 from pydantic import BaseModel
-from sqlalchemy import Date
+import datetime
 
 # Price
 class PriceBase(BaseModel):
@@ -52,5 +52,16 @@ class SaleBase(BaseModel):
     class Config:
         from_attributes  = True
         
+# History
+class HistoryOut(BaseModel):
+    id: int
+    date: datetime.date
+    name_fruit: str
+    nombre: int
+    prix_total:int|float
 
+    
+
+    class Config:
+        from_attributes = True
     
