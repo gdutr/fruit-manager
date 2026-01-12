@@ -1,0 +1,427 @@
+[
+      {
+            "nom": "Ananas",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/ananas1/2783263332.jpg",
+            "description": {
+                  "Cultivé": "En France DOM-TOM",
+                  "Conservation": "6 jours max. à l’air ambiant",
+                  "Apport": "54 kcal pour 100g",
+                  "Vitamine": "Riche vitamines C"
+            },
+            "composition": {
+                  "Eau": "85,50 g",
+                  "Glucides": "11,70 g",
+                  "Fibres": "1,20 g",
+                  "Vitamine B9": "19,60 µg",
+                  "Vitamine C": "46,10 mg",
+                  "Manganèse": "0,84 mg"
+            }
+      },
+      {
+            "nom": "Anone",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/anone-1/4289713124.jpg",
+            "description": {
+                  "Pleine saison": "Octobre à février",
+                  "Cultivé": "En France DOM-TOM",
+                  "Conservation": "6 jours max. à l’air ambiant"
+            },
+            "composition": null
+      },
+      {
+            "nom": "Carambole",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/carambole/3993312853.jpg",
+            "description": {
+                  "Pleine saison": "Toute l'année",
+                  "Cultivé": "En France DOM-TOM",
+                  "Conservation": "4 à 5 jours à l’air ambiant"
+            },
+            "composition": null
+      },
+      {
+            "nom": "Châtaigne",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/chataigne/814131187.jpg",
+            "description": {
+                  "Cultivé": "En France",
+                  "Conservation": "4 à 5 jours dans le bac à légumes",
+                  "Apport": "144 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine B9",
+                  "À partir de": "12 mois"
+            },
+            "composition": {
+                  "Eau": "62,70 g",
+                  "Glucides": "28,80 g",
+                  "Fibres": "4 g",
+                  "Vitamine B9": "58 µg",
+                  "Potassium": "359 mg",
+                  "Polyphénols totaux": "1215,27 mg"
+            }
+      },
+      {
+            "nom": "Citron, Citron vert",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/citron-citron-vert-1/3446346131.jpg",
+            "description": {
+                  "Cultivé": "En France",
+                  "Conservation": "7 à 8 à l’air ambiant",
+                  "Apport": "27 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine C",
+                  "À partir de": "24 mois"
+            },
+            "composition": {
+                  "Eau": "91,30 g",
+                  "Glucides": "1,56 g",
+                  "Fibres": "<0,50 g",
+                  "Vitamine B9": "28,40 µg",
+                  "Vitamine C": "45 mg"
+            }
+      },
+      {
+            "nom": "Clémentine, Mandarine",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/clementine/99059306.jpg",
+            "description": {
+                  "Cultivé": "En France",
+                  "Conservation": "6 jours à l’air ambiant",
+                  "Apport": "47 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine B9",
+                  "À partir de": "24 mois"
+            },
+            "composition": {
+                  "Eau": "87 g",
+                  "Glucides": "9,17 g",
+                  "Fibres": "1,70 g",
+                  "Vitamine B9": "27,60 µg",
+                  "Vitamine C": "49,20 mg"
+            }
+      },
+      {
+            "nom": "Datte",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/datte1/3252048652.jpg",
+            "description": {
+                  "Pleine saison": "Octobre à décembre",
+                  "Cultivé": "En France",
+                  "Conservation": "À température ambiante",
+                  "À partir de": "12 mois"
+            },
+            "composition": null
+      },
+      {
+            "nom": "Fruit de la passion",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/fruit-de-la-passion-1/1647495715.jpg",
+            "description": {
+                  "Cultivé": "DOM-TOM",
+                  "Apport": "101 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine B9",
+                  "À partir de": "24 mois"
+            },
+            "composition": {
+                  "Eau": "73,60 g",
+                  "Glucides": "10,90 g",
+                  "Fibres": "6,80 g",
+                  "Provitamine A Béta-carotène": "1010 µg",
+                  "Vitamine B9": "101 µg",
+                  "Vitamine C": "25,60 mg"
+            }
+      },
+      {
+            "nom": "Goyave",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/goyave/3676268799.jpg",
+            "description": {
+                  "Pleine saison": "Décembre",
+                  "Cultivé": "En France",
+                  "Conservation": "2 jours dans le bac à légumes",
+                  "À partir de": "24 mois"
+            },
+            "composition": null
+      },
+      {
+            "nom": "Grenade",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/grenade/1766950664.jpg",
+            "description": {
+                  "Cultivé": "En France et en Europe",
+                  "Conservation": "10 jours à l'air libre",
+                  "Apport": "80 kcal pour 100 g",
+                  "Vitamine": "Riche en vitamine C",
+                  "A partir de": "12 mois"
+            },
+            "composition": {
+                  "Eau": "79,40 g",
+                  "Glucides": "14,30 g",
+                  "Fibres": "2,30 g",
+                  "Vitamine C": "9,02 mg",
+                  "Cuivre": "0,11 mg",
+                  "Potassium": "230 mg"
+            }
+      },
+      {
+            "nom": "Kaki",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/kaki-1/1823612275.jpg",
+            "description": {
+                  "Conservation": "1 à 2 jours à l’air ambiant",
+                  "Apport": "67 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine C",
+                  "A partir de": "12 mois"
+            },
+            "composition": {
+                  "Eau": "81,80 g",
+                  "Glucides": "14,30 g",
+                  "Fibres": "3,40 g",
+                  "Vitamine B9": "22,10 µg",
+                  "Potassium": "160 mg",
+                  "Polyphénols totaux": "1,28 mg"
+            }
+      },
+      {
+            "nom": "Kiwi",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/kiwi-1/3461496193.jpg",
+            "description": {
+                  "Cultivé": "En France",
+                  "Conservation": "3 à 4 semaines dans le bac à légumes",
+                  "Apport": "60 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine C et K1",
+                  "A partir de": "24 mois"
+            },
+            "composition": {
+                  "Eau": "83,50 g",
+                  "Glucides": "11 g",
+                  "Fibres": "2,40 g",
+                  "Vitamine C": "81,90 mg",
+                  "Vitamine K1": "16,60 µg",
+                  "Cuivre": "0,15 mg"
+            }
+      },
+      {
+            "nom": "Litchi",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/litchi-1/3575572902.jpg",
+            "description": {
+                  "Cultivé": "DOM-TOM",
+                  "Conservation": "2 jours à l’air ambiant",
+                  "Apport": "81 kcal pour 100 g",
+                  "Vitamine": "Riche en vitamines C et B9",
+                  "A partir de": "12 mois"
+            },
+            "composition": {
+                  "Eau": "80,50 g",
+                  "Glucides": "16,10 g",
+                  "Fibres": "2 g",
+                  "Vitamine C": "19,20 mg",
+                  "Cuivre": "0,20 mg",
+                  "Polyphénols totaux": "28,80 mg"
+            }
+      },
+      {
+            "nom": "Mangoustan",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/mangoustan-1/270600344.jpg",
+            "description": {
+                  "Saison": "Toute l’année",
+                  "Cultivé": "En Chine et Thaïlande",
+                  "Conservation": "2 à 3 jours à l’air ambiant",
+                  "A partir de": "12 mois"
+            },
+            "composition": null
+      },
+      {
+            "nom": "Mangue",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/mangue/3140435981.jpg",
+            "description": {
+                  "Cultivé": "En France DOM-TOM",
+                  "Conservation": "1 jour à l’air ambiant",
+                  "Apport": "73 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine B9 et C",
+                  "A partir de": "24 mois"
+            },
+            "composition": {
+                  "Eau": "81,10 g",
+                  "Glucides": "14,30 g",
+                  "Fibres": "1,60 g",
+                  "Provitamine A Béta-carotène": "864 µg",
+                  "Vitamine B9": "70,20 µg",
+                  "Vitamine C": "25 mg"
+            }
+      },
+      {
+            "nom": "Noisette",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/noisette1/354621799.jpg",
+            "description": {
+                  "Cultivé": "En Turquie, Espagne, France, États-Unis",
+                  "Conservation": "Plusieurs semaines à l’air libre",
+                  "Apport": "622 kcal pour 100g",
+                  "Vitamine": "Riche vitamine B9",
+                  "À partir de": "12 mois"
+            },
+            "composition": {
+                  "Eau": "7,30 g",
+                  "Fibres": "11,60 g",
+                  "Vitamine B9": "65,20 µg",
+                  "Cuivre": "1,70 mg",
+                  "Manganèse": "3,30 mg"
+            }
+      },
+      {
+            "nom": "Noix",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/noix1/2404426154.jpg",
+            "description": {
+                  "Cultivé": "En France",
+                  "Conservation": "2 jours dans le bac à légumes pour les noix fraîches",
+                  "Apport": "700 kcal pour 100g",
+                  "Vitamine": "Riche en B9"
+            },
+            "composition": {
+                  "Eau": "4 g",
+                  "Fibres": "6,70 g",
+                  "Vitamine B9": "120 µg",
+                  "Cuivre": "1,10 mg",
+                  "Manganèse": "2,90 mg"
+            }
+      },
+      {
+            "nom": "Noix de coco",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/noix-de-coco-1/1683406767.jpg",
+            "description": {
+                  "Pleine saison": "Novembre à février",
+                  "Cultivé": "En France DOM-TOM",
+                  "Conservation": "À air ambiant",
+                  "Apport": "358 kcal pour 100g",
+                  "À partir de": "24 mois"
+            },
+            "composition": {
+                  "Eau": "47 g",
+                  "Fibres": "9 g",
+                  "Cuivre": "0,44 mg",
+                  "Manganèse": "1,50 mg",
+                  "Potassium": "356 mg"
+            }
+      },
+      {
+            "nom": "Orange",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/orange1/2449947513.jpg",
+            "description": {
+                  "Cultivé": "En France",
+                  "Conservation": "1 semaine à l’air ambiant",
+                  "Apport": "45 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine C et B9",
+                  "À partir de": "12 mois"
+            },
+            "composition": {
+                  "Eau": "87,30 g",
+                  "Glucides": "8,03 g",
+                  "Fibres": "2,70 g",
+                  "Vitamine B9": "25,90 µg",
+                  "Vitamine C": "47,50 mg",
+                  "Polyphénols totaux": "48,85 mg"
+            }
+      },
+      {
+            "nom": "Papaye",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/papaye1/2530123257.jpg",
+            "description": {
+                  "Pleine saison": "Oct.-Déc.",
+                  "Conservation": "À l’air ambiant",
+                  "Apport": "42 kcal pour 100g",
+                  "Vitamine": "Riche vitamine C et B9",
+                  "À partir de": "24 mois"
+            },
+            "composition": {
+                  "Eau": "88,80 g",
+                  "Glucides": "8,53 g",
+                  "Fibres": "1,80 g",
+                  "Vitamine B9": "55,30 µg",
+                  "Vitamine C": "65,30 mg",
+                  "Potassium": "200 mg"
+            }
+      },
+      {
+            "nom": "Physalis",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/physalis-couv/3128352657.jpg",
+            "description": {
+                  "Pleine saison": "Nov.-Fév.",
+                  "Cultivé": "France",
+                  "Conservation": "3 à 4 mois à l’air ambiant"
+            },
+            "composition": null
+      },
+      {
+            "nom": "Pignon de pin",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/pignon-de-pin-1/1072535450.jpg",
+            "description": {
+                  "Pleine saison": "Toute l’année",
+                  "Cultivé": "France",
+                  "Conservation": "Dans un endroit sec et frais"
+            },
+            "composition": null
+      },
+      {
+            "nom": "Pitaya",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/pitaya1/2452038887.jpg",
+            "description": {
+                  "Pleine saison": "Toute l’année",
+                  "Cultivé": "France DOM-TOM",
+                  "Conservation": "Quelques heures après la coupe",
+                  "À partir de": "24 mois"
+            },
+            "composition": null
+      },
+      {
+            "nom": "Poire",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/poire-1/2455053463.jpg",
+            "description": {
+                  "Cultivé": "France",
+                  "Conservation": "2 à 3 jours à l’air ambiant",
+                  "Apport": "54 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine B9",
+                  "À partir de": "24 mois"
+            },
+            "composition": {
+                  "Eau": "85,30 g",
+                  "Glucides": "11,40 g",
+                  "Fibres": "3,10 g",
+                  "Vitamine B9": "12,60 µg",
+                  "Cuivre": "0,05 mg",
+                  "Polyphénols totaux": "8,32 mg"
+            }
+      },
+      {
+            "nom": "Pomelo",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/pomelo1/451923691.jpg",
+            "description": {
+                  "Cultivé": "France DOM-TOM",
+                  "Conservation": "8 jours à l’air ambiant",
+                  "Apport": "39 kcal pour 100g",
+                  "Vitamine": "Riche en vitamine C et B9",
+                  "À partir de": "6 mois"
+            },
+            "composition": {
+                  "Eau": "89,30 g",
+                  "Glucides": "8,02 g",
+                  "Fibres": "0,80 g",
+                  "Vitamine B6": "0,36 mg",
+                  "Vitamine B9": "52,90 µg",
+                  "Vitamine C": "42,40 mg"
+            }
+      },
+      {
+            "nom": "Pomme",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/pomme-card/4074011041.jpg",
+            "description": {
+                  "Cultivé": "France",
+                  "Conservation": "7 à 8 jours à l’air ambiant",
+                  "Apport": "54 kcal pour 100g",
+                  "Vitamine": "Riche en fibres",
+                  "À partir de": "4 mois"
+            },
+            "composition": {
+                  "Eau": "86,40 g",
+                  "Glucides": "11,20 g",
+                  "Fibres": "1,90 g",
+                  "Potassium": "120 mg",
+                  "Flavonoïdes": "14,52 mg"
+            }
+      },
+      {
+            "nom": "Sapotille",
+            "lien_image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/sapotille/784984126.jpeg",
+            "description": {
+                  "Saison": "Toute l’année",
+                  "Conservation": "Dans un endroit frais et aéré"
+            },
+            "composition": null
+      }
+]

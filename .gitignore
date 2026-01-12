@@ -1,7 +1,7 @@
-*.txt
-*.json
+seasons_fruits_legs.json
+prix.json
+inventaire.json
 .venv
 __pycache__/
 *.ipynb
 test_fastapi.py
-*.db
