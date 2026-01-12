@@ -1,19 +1,56 @@
+# import subprocess
+# import multiprocessing
+# import uvicorn
+
+# def run_api():
+#     uvicorn.run("main:app", port=8000, log_level="info")
+
+# def run_streamlit():
+#     subprocess.run(["streamlit", "run", "src/ui/app.py"])
+
+# if __name__ == "__main__":
+#     p1 = multiprocessing.Process(target=run_api)
+#     p2 = multiprocessing.Process(target=run_streamlit)
+
+#     p1.start()
+#     p2.start()
+
+#     p1.join()
+#     p2.join()
+    
 import subprocess
 import multiprocessing
-import uvicorn
 
 def run_api():
-    uvicorn.run("main:app", port=8000, log_level="info")
+    """Lance l'API FastAPI."""
+    subprocess.run([
+        "uvicorn",
+        "src.api.main:app",
+        "--host", "0.0.0.0",
+        "--port", "8000",
+        "--reload"
+    ])
 
 def run_streamlit():
-    subprocess.run(["streamlit", "run", "app.py"])
+    """Lance l'interface Streamlit."""
+    subprocess.run([
+        "streamlit", "run",
+        "src/ui/app.py",
+        "--server.port", "8501"
+    ])
 
 if __name__ == "__main__":
-    p1 = multiprocessing.Process(target=run_api)
-    p2 = multiprocessing.Process(target=run_streamlit)
-
-    p1.start()
-    p2.start()
-
-    p1.join()
-    p2.join()
+    # Lancer les deux processus en parallèle
+    api_process = multiprocessing.Process(target=run_api)
+    streamlit_process = multiprocessing.Process(target=run_streamlit)
+    
+    api_process.start()
+    streamlit_process.start()
+    
+    try:
+        api_process.join()
+        streamlit_process.join()
+    except KeyboardInterrupt:
+        print("\n🛑 Arrêt des serveurs...")
+        api_process.terminate()
+        streamlit_process.terminate()
