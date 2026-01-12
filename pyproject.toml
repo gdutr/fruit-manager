@@ -2,9 +2,13 @@
 name = "fruit-manager"
 version = "0.1.0"
 description = ""
+
 authors = [
     {name = "Guillaume",email = "guippon@gmail.com"}
 ]
+
+
+
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -23,7 +27,8 @@ dependencies = [
     "streamlit-folium (>=0.25.1,<0.26.0)",
     "streamlit-image-select (>=0.6.0,<0.7.0)"
 ]
-
+[tool.poetry]
+packages = [{ include = "src" }]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
