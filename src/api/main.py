@@ -1,9 +1,10 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-from my_package.models import Base, Inventaire, Price, History
-from my_package.database import engine, get_db
-from my_package.schemas import FruitCreate, FruitInventaire, FruitBase, FruitOut, SaleBase, InventaireOut, HistoryOut
+from src.core.models import Base, Inventaire, Price, History
+from src.core.database import engine, get_db
+from src.core.schemas import FruitCreate, FruitInventaire, FruitBase, FruitOut, SaleBase, InventaireOut, HistoryOut
 from datetime import datetime
+import json
 import uvicorn
 
 
@@ -12,18 +13,23 @@ app = FastAPI()
 # Créer les tables si elles n'existent pas encore
 Base.metadata.create_all(bind=engine)
 
+# IMPORTATION BASE DE DONNEE SEASONS
+with open("data/seasons_fruits_legs.json", "r", encoding="utf-8") as f:
+    json_seasons = json.load(f)
+
+
 ##########################
 
 # INVENTAIRE
 
 ##########################
 
-@app.get("/inventaire/", response_model=list[FruitInventaire])
+@app.get("/inventaire", response_model=list[FruitInventaire])
 async def inventaire(db:Session = Depends(get_db)):
     return db.query(Inventaire).all()
 
 
-@app.get("/inventaire/{fruit}", response_model = FruitInventaire)
+@app.get("/inventaire/fruit/{fruit}", response_model = FruitInventaire)
 async def fruit(fruit:str, db:Session = Depends(get_db)):
     query = db.query(Inventaire).where(Inventaire.name==fruit).first()
     if not query:
@@ -99,6 +105,16 @@ async def delete_fruit(fruit:str, db:Session = Depends(get_db)):
 @app.get("/history/", response_model=list[HistoryOut])
 async def history(db: Session = Depends(get_db)):
     return db.query(History).all()
+
+
+################################################################
+
+# SEASONS
+
+################################################################
+@app.get("/seasons/{mois}")
+async def seasons(mois:str)->dict:
+    return json_seasons[mois]
 
 
 if __name__ == "__main__":
