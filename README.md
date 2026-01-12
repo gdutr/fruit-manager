@@ -134,10 +134,6 @@ pip install -r requirements.txt
 python scripts/init_database.py
 ```
 
-> **Note** : Le fichier `requirements.txt` est généré automatiquement depuis `pyproject.toml` via Poetry. Si vous maintenez ce projet, pensez à le régénérer après chaque modification des dépendances avec :
-> ```bash
-> poetry export -f requirements.txt --output requirements.txt --without-hashes
-> ```
 
 ---
 ## 🚀 Utilisation
@@ -195,14 +191,6 @@ Une fois l'API lancée, accédez à la documentation interactive :
 - [ ] Authentification utilisateur
 - [ ] Tests unitaires et d'intégration
 
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à :
-1. Fork le projet
-2. Créer une branche (`git checkout -b feature/amelioration`)
-3. Commit vos changements (`git commit -m 'Ajout d'une fonctionnalité'`)
-4. Push vers la branche (`git push origin feature/amelioration`)
-5. Ouvrir une Pull Request
 
 ## 📝 Licence
 
