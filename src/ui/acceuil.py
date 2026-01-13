@@ -1,5 +1,5 @@
 import streamlit as st
-from src.core.fruit_manager import ouvrir_tresorerie, ecrire_tresorerie
+from src.core.treasure import *
 import requests
 import pandas as pd
 
@@ -8,6 +8,8 @@ st.set_page_config(layout="wide")
 
 # VARIABLE
 API_URL = "http://127.0.0.1:8000"
+
+API_URL = "https://fruit-manager-ljbh.onrender.com"
 
 # Importation des données
 tresorerie = ouvrir_tresorerie()
