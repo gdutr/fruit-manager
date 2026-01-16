@@ -9,8 +9,6 @@ st.set_page_config(layout="wide")
 # VARIABLE
 API_URL = "http://127.0.0.1:8000"
 
-API_URL = "https://fruit-manager-ljbh.onrender.com"
-
 # Importation des données
 tresorerie = ouvrir_tresorerie()
 if "inventaire" not in st.session_state:
