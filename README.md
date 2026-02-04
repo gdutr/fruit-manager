@@ -78,7 +78,7 @@ curl -sSL https://install.python-poetry.org | python3 -
 
 2. **Cloner le repository**
 ```bash
-git clone https://github.com/votre-username/fruit-manager.git
+git clone https://github.com/gdutr/fruit-manager.git
 cd fruit-manager
 ```
 
@@ -103,7 +103,7 @@ python scripts/init_database.py
 
 1. **Cloner le repository**
 ```bash
-git clone https://github.com/votre-username/fruit-manager.git
+git clone https://github.com/gdutr/fruit-manager.git
 cd fruit-manager
 ```
 
