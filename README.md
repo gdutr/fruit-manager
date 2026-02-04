@@ -111,12 +111,12 @@ python -m venv venv
 
    **Sur Linux/Mac :**
 ```bash
-   source venv/bin/activate
+source venv/bin/activate
 ```
 
    **Sur Windows :**
 ```bash
-   venv\Scripts\activate
+venv\Scripts\activate
 ```
 
 4. **Installer les dépendances**
