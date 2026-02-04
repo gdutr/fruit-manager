@@ -1,5 +1,5 @@
 import streamlit as st
-from src.core.fruit_manager import ouvrir_tresorerie, ecrire_tresorerie
+from src.core.treasure import *
 import requests
 import pandas as pd
 
