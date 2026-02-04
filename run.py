@@ -6,8 +6,8 @@ def run_api():
     subprocess.run([
         "uvicorn",
         "src.api.main:app",
-        "--host", "0.0.0.0",
-        "--port", "8000",
+        # "--host", "0.0.0.0",
+        # "--port", "8000",
         "--reload"
     ])
 
@@ -16,7 +16,7 @@ def run_streamlit():
     subprocess.run([
         "streamlit", "run",
         "src/ui/acceuil.py",
-        "--server.port", "8501"
+        # "--server.port", "8501"
     ])
 
 if __name__ == "__main__":
