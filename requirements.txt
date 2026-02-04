@@ -74,3 +74,4 @@ uvicorn==0.40.0 ; python_version >= "3.12"
 watchdog==6.0.0 ; python_version >= "3.12" and platform_system != "Darwin"
 webencodings==0.5.1 ; python_version >= "3.12"
 xyzservices==2025.4.0 ; python_version >= "3.12"
+-e .
