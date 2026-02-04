@@ -92,11 +92,6 @@ poetry install
 poetry shell
 ```
 
-5. **Initialiser la base de données** (si nécessaire)
-```bash
-python scripts/init_database.py
-```
-
 ---
 
 ### Option 2 : Installation avec pip (sans Poetry)
