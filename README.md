@@ -64,7 +64,7 @@ fruit-manager/
 ## 🔧 Installation
 
 ### Prérequis
-- Python 3.9 ou supérieur
+- Python 3.12 ou supérieur
 - Poetry
 
 ---
