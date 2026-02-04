@@ -4,3 +4,4 @@ inventaire.json
 __pycache__/
 *.ipynb
 test_fastapi.py
+.env
