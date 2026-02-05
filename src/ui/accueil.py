@@ -4,9 +4,14 @@ import requests
 import pandas as pd
 
 # Configurer la mise en page de la page Streamlit pour qu'elle soit large
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide",
+    page_title="Fruit Manager",
+    page_icon="./fruit-manager-logo.svg"
+)
+
 
 # VARIABLE
+PATH_LOGO = "./fruit-manager-logo.svg"
 API_URL = "http://127.0.0.1:8000"
 
 # Importation des données
@@ -67,6 +72,11 @@ with st.sidebar:
 # DASHBOARD
 
 #####################################
+st.markdown("---")
+st.markdown(f"""<div align="center">
+    <img src="https://raw.githubusercontent.com/gdutr/fruit-manager/63cd361f5b5e4789f25832367a2515a7e1732a67/fruit-manager-logo.svg" alt="Logo" height="150" width="2100">
+</div>""", unsafe_allow_html=True)
+st.markdown("___")
 
 st.title("🍇 Dashboard de la plantation")
 
