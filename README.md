@@ -1,6 +1,6 @@
 <!-- centré et redimensionné -->
 <p align="center">
-  <img src="./fruit-manager-logo.svg" alt="Fruit Manager logo" width="800" />
+  <img src="./fruit-manager-logo.svg" alt="Fruit Manager logo" width="300" />
 </p>
 
 # 🍇 Fruit Manager
