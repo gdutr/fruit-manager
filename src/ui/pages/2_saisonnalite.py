@@ -72,16 +72,25 @@ API_URL = st.session_state.API_URL
  
 # MAIN
 
-##########################    
+##########################  
+
+# Variable de mémorisation (month_memory) pour faire appel à l'api uniquement lorsque la variable est différente
+if "month_memory" not in st.session_state:
+    st.session_state.month_memory = None
+
+# Choix du mois
 choice_month = st.selectbox("Choisissez un mois", list_month)
 
-if choice_month:
-    list_fruit = requests.get(f"{API_URL}/seasons/{choice_month}").json().get('fruits',None)
+if choice_month != st.session_state.month_memory:
+    # Màj de month_memory
+    st.session_state.month_memory = choice_month
     
-    nbre_lignes = len(list_fruit)//5
+    st.session_state.list_fruit = requests.get(f"{API_URL}/seasons/{choice_month}").json().get('fruits',None)
     
-    # rangement par ordre alphabétique
-    list_fruit = sorted(list_fruit, key = lambda x: x['nom'])
+nbre_lignes = len(st.session_state.list_fruit)//5
+
+# rangement par ordre alphabétique
+list_fruit = sorted(st.session_state.list_fruit, key = lambda x: x['nom'])
 
 
 #############################
@@ -188,7 +197,7 @@ with st.sidebar:
     else:
         list_fruit = [fruit for fruit in list_fruit if (fruit['description'].get("Apport", "") and minimum <= int( re.findall(r"^\d+",fruit['description'].get("Apport"))[0]) <= maximum)]
     # TRI SELON CROISSANT/DECROISSANT
-    trie_apport = st.segmented_control("",["Croissant", "Décroissant"],selection_mode="single", label_visibility="collapsed", key = "tri_calorie")
+    trie_apport = st.segmented_control("Tri des calories",["Croissant", "Décroissant"],selection_mode="single", label_visibility="collapsed", key = "tri_calorie")
     # FLAG PERMETTANT DE NE PAS FAIRE FONCTIONNER LE TRI EAU
     if trie_apport:
         list_fruit = [fruit for fruit in list_fruit if re.findall(r"^\d+",fruit['description'].get("Apport",""))]
@@ -219,7 +228,7 @@ with st.sidebar:
     if tri_flag:
         pass
     else:
-        trie_eau = st.segmented_control("",["Croissant", "Décroissant"],selection_mode="single", label_visibility="collapsed", key="tri_eau")
+        trie_eau = st.segmented_control("Tri de l'eau",["Croissant", "Décroissant"],selection_mode="single", label_visibility="collapsed", key="tri_eau")
         # Croisant
         if trie_eau:
             list_fruit = [fruit for fruit in list_fruit if (fruit.get('composition', "") and re.findall(r"^[\d.]+",fruit['description'].get("Apport","")))]

@@ -43,6 +43,9 @@ with st.sidebar:
         # Mettre à jour session_state
         st.session_state.inventaire = {i['name']: i["quantite"] for i in requests.get(f"{API_URL}/inventaire").json()}
         
+        # Màj historique
+        st.session_state.history = requests.get(f"{API_URL}/history/").json() 
+        
         
     # Récolte des Fruits
     st.title("🌱 Récolter des Fruits")
@@ -55,6 +58,9 @@ with st.sidebar:
 
         # Mettre à jour session_state
         st.session_state.inventaire = {i['name']: i["quantite"] for i in requests.get(f"{API_URL}/inventaire").json()}
+        
+        # Màj historique
+        st.session_state.history = requests.get(f"{API_URL}/history/").json() 
 
 #####################################
 
@@ -73,6 +79,4 @@ st.table(st.session_state.inventaire)
 
 st.header("📋 Historique")
 
-
-st.session_state.history = requests.get(f"{API_URL}/history/").json() 
 st.table(st.session_state.history )
