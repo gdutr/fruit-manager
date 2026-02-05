@@ -15,7 +15,7 @@ def run_streamlit():
     """Lance l'interface Streamlit."""
     subprocess.run([
         "streamlit", "run",
-        "src/ui/acceuil.py",
+        "src/ui/accueil.py",
         # "--server.port", "8501"
     ])
 
