@@ -2,6 +2,8 @@ import streamlit as st
 from src.core.treasure import *
 import requests
 import pandas as pd
+import os
+from dotenv import load_dotenv
 
 # Configurer la mise en page de la page Streamlit pour qu'elle soit large
 st.set_page_config(layout="wide",
@@ -12,7 +14,15 @@ st.set_page_config(layout="wide",
 
 # VARIABLE
 PATH_LOGO = "./fruit-manager-logo.svg"
-API_URL = "http://127.0.0.1:8000"
+
+# LE TRY REGARDE SI UNE SESSION EST OUVERTE, SINON ELLE PREND LE LIEN API DIRECTEMENT DANS L'ENVIRONNEMENT
+try:
+    requests.get('http://127.0.0.1:8000')
+    API_URL = 'http://127.0.0.1:8000'
+except:
+    # CHARGEMENT DES VARIABLE D'ENVIRONNEMENT DU FICHIER .env
+    load_dotenv()
+    API_URL = os.getenv("API_URL")
 
 # Importation des données
 tresorerie = ouvrir_tresorerie()
