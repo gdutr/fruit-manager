@@ -3,6 +3,8 @@
   <img src="./fruit-manager-logo.svg" alt="Fruit Manager logo" width="300" />
 </p>
 
+[Lien de l'application](https://gdutr-fruit-manager-srcuiaccueil-jdpv4n.streamlit.app/)
+
 # 🍇 Fruit Manager
 Application de gestion d'inventaire et de ventes de fruits avec suivi de trésorerie et analyse de saisonnalité.
 
